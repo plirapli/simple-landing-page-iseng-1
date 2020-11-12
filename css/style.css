@@ -65,26 +65,36 @@ body {
   gap: 12px;
 }
 
-.header ul li {
-  padding: 8px 12px;
+#myLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-menu {
   border: 4px solid #e15119;
   font-size: 0.8em;
   border-radius: 4px;
   transition: 300ms;
   text-align: center;
+  /* display: none; */
+}
+
+.hidden {
+  display: block;
 }
 
 .nav-menu a {
+  padding: 10px 24px;
+  display: block;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 800;
   text-decoration: none;
   color: #e15119;
-  font-weight: 800;
 }
 
 .nav-menu:hover {
   background-color: #e15119;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
 .nav-menu:hover a {
@@ -99,7 +109,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
 
 .content h1 {
@@ -107,20 +117,21 @@ body {
   font-family: "Cocogoose", sans-serif;
   font-size: 1.5em;
   font-weight: 900;
+  text-align: center;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .content .button-red {
   border: 4px solid #e15119;
-  width: 180px;
-  padding: 18px 24px;
+  padding: 12px 24px;
   color: #e15119;
+  border-radius: 4px;
   text-decoration: none;
   text-align: center;
-  transition: 300ms;
   text-transform: uppercase;
+  font-size: 0.8em;
   font-weight: 800;
-  border-radius: 4px;
+  transition: 300ms;
 }
 
 .content .button-red:hover {
@@ -221,18 +232,17 @@ body {
   align-items: center;
   gap: 72px;
   border-radius: 48px 48px 0 0;
-
+  padding: 120px 72px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
 }
 .out-container h1 {
-  font-size: 2em;
-  margin-top: 120px;
+  font-size: 1.8em;
+  text-align: center;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Service */
 .services {
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -256,6 +266,7 @@ body {
 }
 
 .service h2 {
+  font-size: 1.2em;
   margin-top: 18px;
 }
 
@@ -264,7 +275,7 @@ body {
   margin-top: 8px;
 }
 
-/* Tablet */
+/* Tablet/Laptop */
 @media (min-width: 961px) {
   /* Nav */
   .container {
@@ -282,23 +293,43 @@ body {
     gap: 24px;
   }
 
+  .header ul li {
+    border: 0;
+  }
+
+  #myLinks {
+    flex-direction: row;
+  }
+
+  .hidden {
+    display: none;
+  }
+
   /* Content */
   .content h1 {
     font-size: 4em;
   }
 
+  .content .button-red {
+    font-size: 1em;
+  }
+
   /* Out-Container */
   .out-container {
-    margin-top: -72px;
+    margin-top: -48px;
     border-radius: 150px 150px 0 0;
   }
 
   .out-container h1 {
     font-size: 4em;
   }
+
+  .service h2 {
+    font-size: 1.8em;
+  }
 }
 
-/* Laptop */
+/* PC */
 @media (min-width: 1200px) {
   /* Services */
   .services {
