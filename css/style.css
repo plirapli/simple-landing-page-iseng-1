@@ -65,10 +65,12 @@ body {
   gap: 12px;
 }
 
-#myLinks {
+.menu {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-height: 0px;
+  overflow: hidden;
 }
 
 .nav-menu {
@@ -84,7 +86,8 @@ body {
   display: block;
 }
 
-.nav-menu a {
+.nav-menu a,
+.nav-menu span {
   padding: 10px 24px;
   display: block;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -97,7 +100,9 @@ body {
   background-color: #e15119;
 }
 
-.nav-menu:hover a {
+.nav-menu:hover a,
+.nav-menu:hover span {
+  cursor: pointer;
   color: white;
 }
 
@@ -230,25 +235,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 72px;
   border-radius: 48px 48px 0 0;
-  padding: 120px 72px;
+  padding: 0px 72px 120px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
-}
-.out-container h1 {
-  font-size: 1.8em;
-  text-align: center;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Service */
+.out-container h1 {
+  font-size: 2em;
+  text-align: center;
+  padding: 120px 0px 72px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
 .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 48px;
-  margin-bottom: 120px;
+  margin-bottom: 0px;
 }
 
 .service {
@@ -290,14 +296,16 @@ body {
   .header ul {
     flex-direction: row;
     justify-content: flex-end;
+    align-items: baseline;
     gap: 24px;
   }
 
-  .header ul li {
+  .nav-menu {
     border: 0;
+    font-size: 1em;
   }
 
-  #myLinks {
+  .menu {
     flex-direction: row;
   }
 
@@ -317,7 +325,7 @@ body {
   /* Out-Container */
   .out-container {
     margin-top: -48px;
-    border-radius: 150px 150px 0 0;
+    border-radius: 100px 100px 0 0;
   }
 
   .out-container h1 {
