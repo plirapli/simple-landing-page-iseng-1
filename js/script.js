@@ -1,12 +1,6 @@
-var x = document.querySelector('span.nav-bar');
-var menu = document.querySelector('.menu')
+const menuBar = document.querySelector('span.nav-bar');
 
-x.addEventListener('click', function() {
-  if (menu.style.maxHeight == "0px") {
-    console.log("tes123");
-    menu.style.maxHeight = '100%';
-  } else {
-    console.log("ga jalan");
-    menu.style.maxHeight = '0px';
-  }
-})
+menuBar.addEventListener('click', () => {
+  document.querySelector('.menu').classList.toggle('show');
+  document.querySelector('.content').classList.toggle('show')
+});

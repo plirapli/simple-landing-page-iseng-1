@@ -62,15 +62,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 12px;
+}
+
+.menu-container {
+  overflow: hidden;
+  transition: all 300ms ease;
 }
 
 .menu {
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: 0px;
   overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.menu.show {
+  transform: translateY(-110%);
 }
 
 .nav-menu {
@@ -115,6 +124,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  transition: all 300ms ease;
+}
+
+.content.show {
+  margin-top: 0;
 }
 
 .content h1 {
